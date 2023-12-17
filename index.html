@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <script src = "https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src = "https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <script src = "https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+        <script src = "https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+        <script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        
+        <link href = "style.css" rel = "stylesheet"/>
+
+        <script src = "js/addButton.js"></script>
+        <script src = "js/markerHandler.js"></script>
+        <script src = "js/addMarker.js"></script>
+
+        <script>
+
+            var firebaseConfig = {
+                apiKey: "AIzaSyBn8G1Xfkw0oALMbxpasGdyOD1cpQk40i8",
+                authDomain: "ar-toy-store-65029.firebaseapp.com",
+                projectId: "ar-toy-store-65029",
+                storageBucket: "ar-toy-store-65029.appspot.com",
+                messagingSenderId: "89255784808",
+                appId: "1:89255784808:web:042e01cb602d20f6d866dd"
+            }
+
+            firebase.initializeApp(firebaseConfig);
+
+        </script>
+
+    </head>
+
+    <body style = "margin : 0px; overflow : hidden;">
+
+        <a-scene id = "scene" vr-mode-ui="enabled: false" embedded arjs gesture-detector create-button create-markers>
+
+            <a-entity camera></a-entity>
+
+        </a-scene>
+
+        <div id = "button-div"></div>
+
+    </body>
+
+</html>
